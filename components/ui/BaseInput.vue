@@ -14,6 +14,8 @@
 </template>
 
 <script setup lang="ts">
+defineOptions({ inheritAttrs: false })
+
 let counter = 0
 const id = `input-${++counter}-${Math.random().toString(36).slice(2, 7)}`
 defineProps<{ modelValue?: string; label?: string; error?: string }>()

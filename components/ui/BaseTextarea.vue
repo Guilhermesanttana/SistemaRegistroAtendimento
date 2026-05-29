@@ -13,6 +13,8 @@
 </template>
 
 <script setup lang="ts">
+defineOptions({ inheritAttrs: false })
+
 let counter = 0
 const id = `textarea-${++counter}-${Math.random().toString(36).slice(2, 7)}`
 withDefaults(defineProps<{ modelValue?: string; label?: string; rows?: number }>(), { rows: 4 })
